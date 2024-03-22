@@ -1,0 +1,53 @@
+This guide will walk you through the steps to run labseq program.
+
+Prerequisites:
+
+Java Development Kit (JDK) 11 or later
+Apache Maven
+Node.js
+npm (Node Package Manager)
+Angular CLI
+Eclipse or another integrated development environment that can use Quarkus.
+
+Step 1: Running the Quarkus Server
+
+Open Eclipse and run the project using Quarkus.
+
+Or
+
+Step 1_v2: Running the Quarkus Server
+
+Open a terminal window.
+
+Navigate to the directory where the Quarkus server project is located.
+
+"cd path/to/labseq"
+
+Build and run the Quarkus application using Maven.
+
+"./mvnw compile quarkus:dev"
+
+The Quarkus server will start and be accessible at http://localhost:8080.
+
+Step 2: Running the Angular App
+
+Open a new terminal window.
+
+Navigate to the directory where the Angular app project is located.
+
+"cd path/to/quarkus-angular-app"
+
+Start the Angular development server.
+
+"ng serve"
+
+Step 3: Using the App
+
+Open your web browser.
+In the browser's address bar, enter http://localhost:4200.
+To not use the Angular App, enter http://localhost:8080/labseq/n , where n should be the value you want to calculate.
+You should see the Angular app's interface.
+The app fetches data from the Quarkus server and displays it on the page.
+
+Now just input a int value for N and press the calculate button and the result of it will appear in the "Result:" section.
+
