@@ -1,0 +1,26 @@
+---
+openapi: 3.0.3
+info:
+  title: code-with-quarkus API
+  version: 1.0.0-SNAPSHOT
+paths:
+  /labseq/{n}:
+    get:
+      tags:
+      - Lab Seq Resource
+      parameters:
+      - name: "n"
+        in: path
+        required: true
+        schema:
+          format: int32
+          type: integer
+      responses:
+        "200":
+          description: OK
+components:
+  securitySchemes:
+    SecurityScheme:
+      type: http
+      description: Authentication
+      scheme: basic

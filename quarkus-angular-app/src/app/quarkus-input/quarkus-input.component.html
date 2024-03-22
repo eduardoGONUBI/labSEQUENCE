@@ -1,0 +1,7 @@
+<div>
+  <label for="nValue">Enter n:</label>
+  <input type="number" id="nValue" [(ngModel)]="n" />
+  <button (click)="calculate()">Calculate</button>
+  <div *ngIf="n < 0" class="error-message">Needs to be a non negative number</div>
+  <div *ngIf="result !== undefined">Result: {{ result }}</div>
+</div>
